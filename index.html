@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Test Website</title>
+    <style>
+        body { font-family: sans-serif; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .header { background-color: #f0f0f0; padding: 10px; margin-bottom: 20px; }
+        .footer { background-color: #f0f0f0; padding: 10px; margin-top: 20px; text-align: center; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1 id="main-title">Selector Test Page</h1>
+        </div>
+
+        <div id="content">
+            <h2>Introduction</h2>
+            <p class="intro-text">This is a paragraph of text used for testing selectors.</p>
+            <p>This is another paragraph, with a <a href="#">link</a> inside it.</p>
+
+            <h2>Form Elements</h2>
+            <form id="test-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username"><br><br>
+                
+                <label for="pwd">Password:</label>
+                <input type="pwd" id="pwd" name="pwd"><br><br>
+
+                <input type="checkbox" id="rmr" name="rmr" value="yes">
+                <label for="rmr">Remember me</label><br><br>
+
+                <p>Please select your favorite language:</p>
+                <input type="radio" id="html" name="fav_language" value="HTML">
+                <label for="html">HTML</label><br>
+                <input type="radio" id="css" name="fav_language" value="CSS">
+                <label for="css">CSS</label><br>
+                <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                <label for="javascript">JavaScript</label><br><br>
+
+                <button type="submit" id="submit-button">Submit</button>
+                <button type="button" class="btn secondary-btn">Secondary Button</button>
+            </form>
+
+            <h2 id="list-header">Lists</h2>
+            <h3>Unordered List</h3>
+            <ul id="unordered-list">
+                <li>First item</li>
+                <li class="special-item">Second item (special)</li>
+                <li>Third item</li>
+            </ul>
+
+            <h3>Ordered List</h3>
+            <ol id="ordered-lista">
+                <li>Apple</li>
+                <li>Banana</li>
+                <li class="special-item">Cherry (special)</li>
+            </ol>
+            
+            <div id="dynamic-content">
+                <p>This paragraph can be changed dynamically.</p>
+                <button id="change-text-button">Change Text</button>
+            </div>
+
+            <div class="hidden">
+                <p>This is a hidden paragraph.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Selector Test</p>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('change-text-btn').addEventListener('click', function() {
+            document.querySelector('#dynamic-content p').textContent = 'The text has been changed!';
+        });
+    </script>
+
+</body>
+</html> 
